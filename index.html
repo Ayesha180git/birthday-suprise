@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Background -->
+
+<div class="background"></div>
+
+<div class="stars"></div>
+
+<div class="hearts"></div>
+
+<!-- Welcome Card -->
+
+<<!-- Welcome Screen -->
+
+<section id="welcome" class="screen active">
+
+    <h1>✨ A Special Surprise ✨</h1>
+
+    <p>
+        Every beautiful journey begins with a single step.
+    </p>
+
+    <button id="startBtn">Start the Journey</button>
+
+</section>
+
+<!-- Quote 1 -->
+
+<section id="quote1" class="screen">
+
+    <h2>💫</h2>
+
+    <p>
+        Every gift carries a beautiful memory.
+    </p>
+
+    <button class="nextBtn">Continue</button>
+
+</section>
+
+<!-- Quote 2 -->
+
+<section id="quote2" class="screen">
+
+    <h2>🌹</h2>
+
+    <p>
+        Some surprises are worth waiting for.
+    </p>
+
+    <button class="nextBtn">Continue</button>
+
+</section>
+
+<!-- Quote 3 -->
+
+<section id="quote3" class="screen">
+
+    <h2>💖</h2>
+
+    <p>
+        Today is all about making someone smile.
+    </p>
+
+    <button class="nextBtn">Continue</button>
+
+</section>
+
+<!-- Quote 4 -->
+
+<section id="quote4" class="screen">
+
+    <h2>🎁</h2>
+
+    <p>
+        One final step...
+        Your surprise is waiting.
+    </p>
+
+    <button id="giftJourneyBtn">
+        Reveal the Gift
+    </button>
+
+</section>
+<!-- ==========================
+     Golden Door Screen
+========================== -->
+
+<section id="doorScreen" class="screen">
+
+    <h2>✨ One Last Step ✨</h2>
+
+    <p>Open the Golden Door to discover your surprise.</p>
+
+    <div class="door-container">
+
+        <div id="goldDoor" class="gold-door">
+
+            <div class="door-handle"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     Gift Screen
+========================== -->
+
+<section id="giftScreen" class="screen">
+
+    <h2>🎁 Your Gift is Here</h2>
+
+    <div class="gift-box">
+        🎁
+    </div>
+
+    <button id="openGiftBtn">
+        Open Gift
+    </button>
+
+</section>
+<!-- ==========================
+      Bow & Arrow Screen
+========================== -->
+
+<section id="bowScreen" class="screen">
+
+    <h2>🏹 Aim for the Heart</h2>
+
+    <p class="instruction">
+        Click the button to pull the bow and release the arrow.
+    </p>
+
+    <div class="gameArea">
+
+        <!-- Bow -->
+        <div id="bow" class="bow">
+            )
+        </div>
+
+        <!-- Bow String -->
+        <div id="string" class="string"></div>
+
+        <!-- Arrow -->
+        <div id="arrow" class="arrow">
+            ➜
+        </div>
+
+        <!-- Heart -->
+        <div id="heartTarget" class="heartTarget">
+            ❤️
+        </div>
+
+    </div>
+
+    <button id="shootBtn">
+        Pull & Release
+    </button>
+
+</section>
+<!-- ==========================
+      Royal Envelope
+========================== -->
+
+<section id="envelopeScreen" class="screen">
+
+    <h2>💌 A Letter For You</h2>
+
+    <p>Click the envelope to read your surprise.</p>
+
+    <div id="envelope" class="envelope">
+
+        <div class="flap"></div>
+
+        <div class="seal">❤</div>
+
+    </div>
+
+</section>
+<!-- ==========================
+     Birthday Letter
+========================== -->
+
+<section id="letterScreen" class="screen">
+
+    <div class="letter">
+
+        <h2>💌 A Letter Just For You 💌</h2>
+
+        <p class="intro">
+            This special letter belongs to...
+        </p>
+
+        <button id="revealBtn">
+            Reveal Name
+        </button>
+
+        <div id="letterContent" class="hidden">
+
+            <h1 id="personName">
+                 My Dear Esha.... ❤️
+            </h1>
+
+            <p class="message">
+
+                Happy Birthday!
+
+                <br><br>
+
+                Today is a reminder of how special you are.
+
+                May your smile always shine brighter than the stars.
+
+                May every dream become reality.
+
+                Stay happy...
+
+                Stay blessed...
+
+                Stay amazing...
+
+                ❤️
+
+            </p>
+
+            <button id="galleryBtn">
+
+                Continue Journey
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================
+     Memory Gallery
+========================== -->
+
+<section id="galleryScreen" class="screen">
+
+    <h2>📸 Our Beautiful Memories</h2>
+
+    <p>
+        Every picture tells a beautiful story...
+    </p>
+
+    <div class="gallery">
+
+        <img src="images/photo1.jpg" id="photo1" class="memory">
+
+        <img src="images/photo2.jpg" id="photo2" class="memory">
+
+        <img src="images/photo3.jpg" id="photo3" class="memory">
+
+    </div>
+
+    <button id="celebrateBtn">
+
+        Celebrate Birthday 🎉
+
+    </button>
+
+</section>
+<!-- ==========================
+     Birthday Celebration
+========================== -->
+
+<section id="celebrationScreen" class="screen">
+
+    <div id="confetti"></div>
+
+    <h1 class="happyTitle">
+        🎉 HAPPY BIRTHDAY 🎉
+    </h1>
+
+    <div class="cake">
+        🎂
+    </div>
+
+    <div class="balloons">
+        🎈 🎈 🎈 🎈 🎈
+    </div>
+
+    <p class="finalWish">
+
+        Wishing you endless happiness,
+        beautiful memories,
+        good health,
+        success,
+        and lots of smiles.
+
+        <br><br>
+
+        💖 Have the Best Birthday Ever 💖
+
+    </p>
+
+    <button id="replayBtn">
+
+        🔄 Replay Journey
+
+    </button>
+
+</section>
+
+</button>
+
+</section>
+
+<script src="script.js"></script>
+
+<button id="musicBtn">🎵 Music</button>
+
+<script src="script.js"></script>
+
+<audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

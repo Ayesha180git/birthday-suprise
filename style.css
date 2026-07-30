@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#050505;
+overflow:hidden;
+color:white;
+
+}
+
+/* Background */
+
+.background{
+
+position:fixed;
+width:100%;
+height:100%;
+background:
+linear-gradient(180deg,#000,#111,#000);
+z-index:-3;
+
+}
+
+/* Stars */
+
+.stars{
+
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(#FFD700 1px,transparent 1px);
+background-size:40px 40px;
+opacity:.3;
+animation:moveStars 80s linear infinite;
+z-index:-2;
+
+}
+
+@keyframes moveStars{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-500px);
+
+}
+
+}
+
+/* Hearts */
+
+.hearts{
+
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+
+}
+
+.heart{
+
+position:absolute;
+bottom:-50px;
+color:#ff5e7e;
+font-size:25px;
+animation:floatHeart linear forwards;
+
+}
+
+@keyframes floatHeart{
+
+from{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
+}
+
+/* Welcome */
+
+.welcome{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+h1{
+
+font-size:60px;
+
+color:#FFD700;
+
+text-shadow:0 0 20px gold;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:22px;
+
+width:800px;
+
+max-width:90%;
+
+line-height:1.8;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:16px 45px;
+
+border:none;
+
+border-radius:40px;
+
+background:#FFD700;
+
+color:#000;
+
+font-weight:bold;
+
+cursor:pointer;
+
+font-size:18px;
+
+box-shadow:0 0 20px gold;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 40px gold;
+
+}
+
+#musicBtn{
+
+margin-top:15px;
+
+background:white;
+
+}
+/* ==========================
+        Screen System
+========================== */
+
+.screen{
+
+position:absolute;
+
+width:100%;
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:1s;
+
+}
+
+.screen.active{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.screen h2{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+}
+
+.screen p{
+
+max-width:700px;
+
+font-size:24px;
+
+line-height:1.8;
+
+}
+/* ==========================
+      Golden Door
+========================== */
+
+.door-container{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.gold-door{
+
+    width:220px;
+
+    height:360px;
+
+    background:linear-gradient(145deg,#8a6500,#FFD700,#8a6500);
+
+    border:6px solid #FFD700;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    transition:1.2s;
+
+    transform-origin:left center;
+
+    box-shadow:0 0 35px gold;
+
+}
+
+.gold-door:hover{
+
+    box-shadow:0 0 60px gold;
+
+}
+
+.door-open{
+
+    transform:perspective(800px) rotateY(-80deg);
+
+}
+
+.door-handle{
+
+    width:18px;
+
+    height:18px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    right:20px;
+
+    top:50%;
+
+}
+
+/* Gift */
+
+.gift-box{
+
+    font-size:140px;
+
+    animation:giftFloat 2.5s infinite ease-in-out;
+
+}
+
+@keyframes giftFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================
+      Bow Screen
+========================== */
+
+.gameArea{
+
+    width:90%;
+    max-width:1100px;
+    height:450px;
+
+    margin-top:40px;
+
+    border:2px solid rgba(255,215,0,.3);
+
+    border-radius:20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.03);
+
+}
+
+/* Bow */
+
+.bow{
+
+    position:absolute;
+
+    left:80px;
+
+    top:150px;
+
+    font-size:140px;
+
+    color:#FFD700;
+
+    text-shadow:0 0 20px gold;
+
+}
+
+/* Bow String */
+
+.string{
+
+    position:absolute;
+
+    left:122px;
+
+    top:170px;
+
+    width:2px;
+
+    height:120px;
+
+    background:white;
+
+}
+
+/* Arrow */
+
+.arrow{
+
+    position:absolute;
+
+    left:130px;
+
+    top:205px;
+
+    font-size:55px;
+
+    color:#FFD700;
+
+    transition:1.5s;
+
+}
+
+/* Heart */
+
+.heartTarget{
+
+    position:absolute;
+
+    right:100px;
+
+    top:170px;
+
+    font-size:90px;
+
+    animation:heartGlow 1.5s infinite alternate;
+
+}
+
+@keyframes heartGlow{
+
+    from{
+
+        transform:scale(1);
+
+        filter:drop-shadow(0 0 5px red);
+
+    }
+
+    to{
+
+        transform:scale(1.2);
+
+        filter:drop-shadow(0 0 30px red);
+
+    }
+
+}
+
+.instruction{
+
+    color:#FFD700;
+
+    margin-top:10px;
+
+}
+/* ==========================
+      Envelope
+========================== */
+
+.envelope{
+
+    width:260px;
+    height:170px;
+
+    background:#d4af37;
+
+    position:relative;
+
+    margin-top:50px;
+
+    cursor:pointer;
+
+    border-radius:10px;
+
+    box-shadow:0 0 30px gold;
+
+    transition:.6s;
+
+}
+
+.envelope:hover{
+
+    transform:scale(1.05);
+
+}
+
+.flap{
+
+    position:absolute;
+
+    width:100%;
+    height:85px;
+
+    background:#c59d1d;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+}
+
+.seal{
+
+    position:absolute;
+
+    top:65px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:#b22222;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    box-shadow:0 0 20px red;
+
+}
+/* ==========================
+      Letter Screen
+========================== */
+
+.letter{
+
+    width:700px;
+    max-width:90%;
+
+    background:#fff8dc;
+
+    color:#222;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 35px gold;
+
+    text-align:center;
+
+    animation:letterPop .8s;
+
+}
+
+@keyframes letterPop{
+
+    from{
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.intro{
+
+    font-size:22px;
+
+    margin:20px 0;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+#personName{
+
+    color:#d4af37;
+
+    margin:30px 0;
+
+    font-size:50px;
+
+    text-shadow:0 0 15px gold;
+
+}
+
+.message{
+
+    line-height:2;
+
+    font-size:20px;
+
+}
+/* ==========================
+      Gallery
+========================== */
+
+.gallery{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin-top:50px;
+
+flex-wrap:wrap;
+
+}
+
+.memory{
+
+width:260px;
+
+height:340px;
+
+object-fit:cover;
+
+border:5px solid gold;
+
+border-radius:20px;
+
+box-shadow:0 0 25px gold;
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.showPhoto{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.memory:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 40px gold;
+
+}
+/* ==========================
+     Celebration
+========================== */
+
+.happyTitle{
+
+font-size:70px;
+
+color:#FFD700;
+
+text-shadow:0 0 20px gold;
+
+animation:titleGlow 2s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+from{
+
+text-shadow:0 0 20px gold;
+
+}
+
+to{
+
+text-shadow:0 0 60px gold;
+
+}
+
+}
+
+.cake{
+
+font-size:150px;
+
+margin:30px;
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+.balloons{
+
+font-size:60px;
+
+margin:20px;
+
+animation:floatBalloons 4s infinite alternate;
+
+}
+
+@keyframes floatBalloons{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-40px);
+
+}
+
+}
+
+.finalWish{
+
+font-size:24px;
+
+line-height:2;
+
+width:80%;
+
+max-width:800px;
+
+margin-top:30px;
+
+}
+
+#replayBtn{
+
+margin-top:40px;
+
+}

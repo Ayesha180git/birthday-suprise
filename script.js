@@ -194,7 +194,6 @@ envelope.onclick=()=>{
     current = 9;
 
     showScreen(current);
-
 };
 
 // Reveal Name
@@ -251,12 +250,6 @@ galleryBtn.onclick=()=>{
 };
 
 // Celebration
-
-celebrateBtn.onclick=()=>{
-
-    alert("🎂 Module 8 will open the Birthday Celebration.");
-
-};
 // ==========================
 // Celebration Screen
 // ==========================

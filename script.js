@@ -177,6 +177,7 @@ arrow.addEventListener("transitionend",()=>{
 // ==========================
 // Open Letter
 // ==========================
+const envelope = document.getElementById("envelope");
 
 const revealBtn =
 document.getElementById("revealBtn");

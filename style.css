@@ -634,7 +634,6 @@ margin-top:50px;
 flex-wrap:wrap;
 
 }
-
 .memory{
 
 width:260px;
@@ -656,6 +655,7 @@ transform:translateY(60px);
 transition:1s;
 
 }
+
 .showPhoto{
 
 opacity:1;
